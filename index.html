@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParaDai1</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to bottom, #0C1446, #F08080); /* Fondo degradado simulando el amanecer */
+            color: #fff; /* Color del texto */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            position: relative;
+            overflow: hidden; /* Ocultar elementos que se salgan del cuerpo */
+        }
+        .sun {
+            width: 100px; /* Ancho del sol */
+            height: 100px; /* Altura del sol */
+            background-color: #FFD700; /* Color del sol */
+            border-radius: 50%; /* Forma del sol */
+            position: relative;
+            animation: sunrise 6s linear infinite; /* Animación del amanecer */
+        }
+        .sun::before {
+            content: '';
+            position: absolute;
+            width: 200px; /* Ancho del brillo del sol */
+            height: 200px; /* Altura del brillo del sol */
+            background-color: rgba(255, 255, 0, 0.3); /* Color del brillo del sol */
+            border-radius: 50%; /* Forma del brillo del sol */
+            top: -50px;
+            left: -50px;
+        }
+        .message {
+            margin-top: 20px; /* Espacio arriba del mensaje */
+            font-size: 24px; /* Tamaño del texto */
+            font-weight: bold; /* Negrita */
+        }
+        .leaf {
+            position: absolute;
+            width: 10px; /* Ancho de la hoja */
+            height: 20px; /* Altura de la hoja */
+            background-color: #3A5F0B; /* Color de la hoja */
+            border-radius: 50%; /* Forma de la hoja */
+            opacity: 0; /* Inicialmente invisible */
+            animation: falling 5s linear infinite; /* Animación de caída de la hoja */
+        }
+        .leaf:nth-child(2) {
+            top: -20%;
+            left: 10%;
+            animation-delay: 1s; /* Retraso en la animación de la segunda hoja */
+        }
+        .leaf:nth-child(3) {
+            top: -20%;
+            left: 20%;
+            animation-delay: 2s; /* Retraso en la animación de la tercera hoja */
+        }
+        .leaf:nth-child(4) {
+            top: -20%;
+            left: 30%;
+            animation-delay: 3s; /* Retraso en la animación de la cuarta hoja */
+        }
+        .leaf:nth-child(5) {
+            top: -20%;
+            left: 40%;
+            animation-delay: 4s; /* Retraso en la animación de la quinta hoja */
+        }
+        .leaf:nth-child(6) {
+            top: -20%;
+            left: 50%;
+            animation-delay: 5s; /* Retraso en la animación de la sexta hoja */
+        }
+        .leaf::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-right: 20px solid #3A5F0B; /* Triángulo */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+        @keyframes sunrise {
+            0% {transform: translateY(-50%) scale(0.8);} /* Tamaño y posición inicial del sol */
+            50% {transform: translateY(0) scale(1.2);} /* Aparición del sol */
+            100% {transform: translateY(-50%) scale(0.8);} /* Retorno a la posición inicial del sol */
+        }
+        @keyframes falling {
+            0% {opacity: 0; transform: translateY(-20%);} /* Inicialmente invisible y arriba */
+            100% {opacity: 1; transform: translateY(120%);} /* Visible y abajo */
+        }
+        .tree {
+            position: absolute;
+            width: 20px; /* Ancho del tronco del árbol */
+            height: 80px; /* Altura del tronco del árbol */
+            background-color: #8B4513; /* Color del tronco del árbol */
+            bottom: 0;
+        }
+        .tree::after {
+            content: '';
+            position: absolute;
+            width: 100px; /* Ancho de la copa del árbol */
+            height: 100px; /* Altura de la copa del árbol */
+            background-color: #228B22; /* Color de la copa del árbol */
+            border-radius: 50%; /* Forma de la copa del árbol */
+            bottom: 80px; /* Posicionamiento de la copa del árbol */
+            left: 50%; /* Posicionamiento de la copa del árbol */
+            transform: translateX(-50%); /* Posicionamiento de la copa del árbol */
+        }
+        .tree:nth-child(2) {
+            left: 20%;
+        }
+        .tree:nth-child(3) {
+            left: 40%;
+        }
+        .tree:nth-child(4) {
+            left: 60%;
+        }
+        .tree:nth-child(5) {
+            left: 80%;
+        }
+    </style>
+</head>
+<body>
+    <div class="sun"></div> <!-- Sol -->
+    <div class="message">
+        <p>Dairita, eres tan linda como el amanecer de hoy</p>
+    </div> <!-- Mensaje -->
+    
+    <!-- Hojas -->
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    
+    <!-- Árboles -->
+    <div class="tree"></div>
+    <div class="tree"></div>
+    <div class="tree"></div>
+    <div class="tree"></div
