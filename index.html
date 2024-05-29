@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ParaDai1</title>
+    <title>ParaDai2</title>
     <style>
         body {
             display: flex;
@@ -19,8 +19,8 @@
             overflow: hidden; /* Ocultar elementos que se salgan del cuerpo */
         }
         .sun {
-            width: 100px; /* Ancho del sol */
-            height: 100px; /* Altura del sol */
+            width: 50px; /* Ancho del sol */
+            height: 50px; /* Altura del sol */
             background-color: #FFD700; /* Color del sol */
             border-radius: 50%; /* Forma del sol */
             position: relative;
@@ -29,12 +29,12 @@
         .sun::before {
             content: '';
             position: absolute;
-            width: 200px; /* Ancho del brillo del sol */
-            height: 200px; /* Altura del brillo del sol */
+            width: 100px; /* Ancho del brillo del sol */
+            height: 100px; /* Altura del brillo del sol */
             background-color: rgba(255, 255, 0, 0.3); /* Color del brillo del sol */
             border-radius: 50%; /* Forma del brillo del sol */
-            top: -50px;
-            left: -50px;
+            top: -25px;
+            left: -25px;
         }
         .message {
             margin-top: 20px; /* Espacio arriba del mensaje */
@@ -96,35 +96,20 @@
             0% {opacity: 0; transform: translateY(-20%);} /* Inicialmente invisible y arriba */
             100% {opacity: 1; transform: translateY(120%);} /* Visible y abajo */
         }
-        .tree {
+        /* Estrellas */
+        .star {
             position: absolute;
-            width: 20px; /* Ancho del tronco del árbol */
-            height: 80px; /* Altura del tronco del árbol */
-            background-color: #8B4513; /* Color del tronco del árbol */
-            bottom: 0;
+            width: 5px;
+            height: 5px;
+            background-color: #fff;
+            border-radius: 50%;
+            opacity: 0; /* Inicialmente invisible */
+            animation: twinkling 3s infinite alternate; /* Animación de parpadeo */
         }
-        .tree::after {
-            content: '';
-            position: absolute;
-            width: 100px; /* Ancho de la copa del árbol */
-            height: 100px; /* Altura de la copa del árbol */
-            background-color: #228B22; /* Color de la copa del árbol */
-            border-radius: 50%; /* Forma de la copa del árbol */
-            bottom: 80px; /* Posicionamiento de la copa del árbol */
-            left: 50%; /* Posicionamiento de la copa del árbol */
-            transform: translateX(-50%); /* Posicionamiento de la copa del árbol */
-        }
-        .tree:nth-child(2) {
-            left: 20%;
-        }
-        .tree:nth-child(3) {
-            left: 40%;
-        }
-        .tree:nth-child(4) {
-            left: 60%;
-        }
-        .tree:nth-child(5) {
-            left: 80%;
+        /* Animación de parpadeo */
+        @keyframes twinkling {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
         }
     </style>
 </head>
@@ -134,16 +119,34 @@
         <p>Dairita, eres tan linda como el amanecer de hoy</p>
     </div> <!-- Mensaje -->
     
-    <!-- Hojas -->
-    <div class="leaf"></div>
-    <div class="leaf"></div>
-    <div class="leaf"></div>
-    <div class="leaf"></div>
-    <div class="leaf"></div>
-    <div class="leaf"></div>
-    
-    <!-- Árboles -->
-    <div class="tree"></div>
-    <div class="tree"></div>
-    <div class="tree"></div>
-    <div class="tree"></div
+       <!-- Estrellas -->
+       <div class="star" style="top: 20%; left: 10%;"></div>
+       <div class="star" style="top: 40%; left: 30%;"></div>
+       <div class="star" style="top: 60%; left: 50%;"></div>
+       <div class="star" style="top: 80%; left: 70%;"></div>
+       <div class="star" style="top: 10%; left: 90%;"></div>
+   
+       <!-- Hojas -->
+       <div class="leaf"></div>
+       <div class="leaf"></div>
+       <div class="leaf"></div>
+       <div class="leaf"></div>
+       <div class="leaf"></div>
+       <div class="leaf"></div>
+       <!-- Estrellas -->
+       <div class="star" style="top: 70%; left: 20%;"></div>
+       <div class="star" style="top: 4%; left: 30%;"></div>
+       <div class="star" style="top: 60%; left: 50%;"></div>
+       <div class="star" style="top: 80%; left: 70%;"></div>
+       <div class="star" style="top: 10%; left: 90%;"></div>
+       
+       
+       <!-- Estrellas -->
+       <div class="star" style="top: 20%; left: 10%;"></div>
+       <div class="star" style="top: 40%; left: 30%;"></div>
+       <div class="star" style="top: 60%; left: 50%;"></div>
+       <div class="star" style="top: 80%; left: 70%;"></div>
+       <div class="star" style="top: 10%; left: 90%;"></div>
+   </body>
+   </html>
+   
