@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ParaDai2</title>
+    <title>Amanecer con Mensaje</title>
     <style>
         body {
             display: flex;
@@ -19,8 +19,8 @@
             overflow: hidden; /* Ocultar elementos que se salgan del cuerpo */
         }
         .sun {
-            width: 50px; /* Ancho del sol */
-            height: 50px; /* Altura del sol */
+            width: 70px; /* Ancho del sol */
+            height: 70px; /* Altura del sol */
             background-color: #FFD700; /* Color del sol */
             border-radius: 50%; /* Forma del sol */
             position: relative;
@@ -29,12 +29,12 @@
         .sun::before {
             content: '';
             position: absolute;
-            width: 100px; /* Ancho del brillo del sol */
-            height: 100px; /* Altura del brillo del sol */
+            width: 140px; /* Ancho del brillo del sol */
+            height: 140px; /* Altura del brillo del sol */
             background-color: rgba(255, 255, 0, 0.3); /* Color del brillo del sol */
             border-radius: 50%; /* Forma del brillo del sol */
-            top: -25px;
-            left: -25px;
+            top: -35px;
+            left: -35px;
         }
         .message {
             margin-top: 20px; /* Espacio arriba del mensaje */
@@ -112,6 +112,7 @@
             100% { opacity: 1; }
         }
     </style>
+
 </head>
 <body>
     <div class="sun"></div> <!-- Sol -->
